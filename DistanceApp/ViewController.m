@@ -34,6 +34,7 @@
     
     self.calculateButton.enabled = NO;
     
+    // allocate space for distance
     self.req = [DGDistanceRequest alloc];
     
     // Grab input from user
@@ -45,19 +46,17 @@
     // Construct an array for destinations
     NSArray *dests = @[dest1, dest2, dest3];
     
+    // Initalize object with those starting points
     self.req = [self.req initWithLocationDescriptions:dests sourceDescription:start];
     
-    // Callback function
+    // Callback function for DGDistance
     self.req.callback= ^(NSArray *responses){
         self.distance1.text = @"callback";
         self.calculateButton.enabled = YES;
-        self.req=nil;
         
     };
-    
+    // Call the function
+    [self.req start];
 }
-
-
-
 
 @end
