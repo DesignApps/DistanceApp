@@ -32,9 +32,23 @@
 
 - (IBAction)calculateButtonTapped:(id)sender {
     
+    self.calculateButton.enabled = NO;
     
+    self.req = [DGDistanceRequest alloc];
     
-    self.distance3.text = @"It worked";
+    // Grab input from user
+    NSString *start = self.startLocation.text;
+    NSString *dest1 = self.endLocation1.text;
+    NSString *dest2 = self.endLocation2.text;
+    NSString *dest3 = self.endLocation3.text;
+    
+    // Construct an array for destinations
+    NSArray *dests = @[dest1, dest2, dest3];
+    
+    self.req = [self.req initWithLocationDescriptions:dests sourceDescription:start];
+    
+    self.calculateButton.enabled = YES;
+    
 }
 
 
