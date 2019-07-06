@@ -47,7 +47,13 @@
     
     self.req = [self.req initWithLocationDescriptions:dests sourceDescription:start];
     
-    self.calculateButton.enabled = YES;
+    // Callback function
+    self.req.callback= ^(NSArray *responses){
+        self.distance1.text = @"callback";
+        self.calculateButton.enabled = YES;
+        self.req=nil;
+        
+    };
     
 }
 
