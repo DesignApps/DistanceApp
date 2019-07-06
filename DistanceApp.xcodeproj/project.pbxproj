@@ -13,9 +13,12 @@
 		9A72763422D105A800652410 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A72763322D105A800652410 /* Assets.xcassets */; };
 		9A72763722D105A800652410 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A72763522D105A800652410 /* LaunchScreen.storyboard */; };
 		9A72763A22D105A800652410 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A72763922D105A800652410 /* main.m */; };
+		B1A988D4B67EC6B23E361453 /* Pods_DistanceApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 725A73EA601366788F05A5A2 /* Pods_DistanceApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11F337C12653AAB38703AD93 /* Pods-DistanceApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DistanceApp.debug.xcconfig"; path = "Target Support Files/Pods-DistanceApp/Pods-DistanceApp.debug.xcconfig"; sourceTree = "<group>"; };
+		725A73EA601366788F05A5A2 /* Pods_DistanceApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DistanceApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A72762722D105A700652410 /* DistanceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DistanceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A72762A22D105A700652410 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9A72762B22D105A700652410 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		9A72763622D105A800652410 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A72763822D105A800652410 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A72763922D105A800652410 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F6E26F9E993ACB0617CC89FE /* Pods-DistanceApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DistanceApp.release.xcconfig"; path = "Target Support Files/Pods-DistanceApp/Pods-DistanceApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1A988D4B67EC6B23E361453 /* Pods_DistanceApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		725ACBE91150E521301EE3B3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				11F337C12653AAB38703AD93 /* Pods-DistanceApp.debug.xcconfig */,
+				F6E26F9E993ACB0617CC89FE /* Pods-DistanceApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		9A72761E22D105A700652410 = {
 			isa = PBXGroup;
 			children = (
 				9A72762922D105A700652410 /* DistanceApp */,
 				9A72762822D105A700652410 /* Products */,
+				725ACBE91150E521301EE3B3 /* Pods */,
+				E708E76D3732EA01BB006239 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +88,14 @@
 			path = DistanceApp;
 			sourceTree = "<group>";
 		};
+		E708E76D3732EA01BB006239 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				725A73EA601366788F05A5A2 /* Pods_DistanceApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,6 +103,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9A72763D22D105A800652410 /* Build configuration list for PBXNativeTarget "DistanceApp" */;
 			buildPhases = (
+				0A90A12FF5863B79D8297C4A /* [CP] Check Pods Manifest.lock */,
 				9A72762322D105A700652410 /* Sources */,
 				9A72762422D105A700652410 /* Frameworks */,
 				9A72762522D105A700652410 /* Resources */,
@@ -135,6 +161,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A90A12FF5863B79D8297C4A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DistanceApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9A72762322D105A700652410 /* Sources */ = {
@@ -283,6 +334,7 @@
 		};
 		9A72763E22D105A800652410 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11F337C12653AAB38703AD93 /* Pods-DistanceApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +352,7 @@
 		};
 		9A72763F22D105A800652410 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6E26F9E993ACB0617CC89FE /* Pods-DistanceApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
