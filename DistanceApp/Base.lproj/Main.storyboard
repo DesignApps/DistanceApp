@@ -13,7 +13,6 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -77,6 +76,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xOK-As-4hn">
+                                <rect key="frame" x="72" y="185" width="271" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="m"/>
+                                    <segment title="km"/>
+                                    <segment title="mi"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -84,14 +92,16 @@
                     <connections>
                         <outlet property="calculateButton" destination="MvA-H0-450" id="Okz-3L-KT1"/>
                         <outlet property="distance1" destination="sMu-0N-WC0" id="cND-LX-0h5"/>
-                        <outlet property="distance2" destination="8bC-Xf-vdC" id="5IC-CM-kQa"/>
+                        <outlet property="distance2" destination="Xri-Ng-K5X" id="aIA-YJ-mag"/>
                         <outlet property="distance3" destination="VSF-Fn-vMi" id="Vya-Rx-vRc"/>
                         <outlet property="endLocation1" destination="W5b-Uf-aIr" id="Dkl-w5-nL8"/>
                         <outlet property="endLocation2" destination="4yp-jG-ARg" id="4ZM-kB-BAz"/>
                         <outlet property="endLocation3" destination="uSY-pi-OtL" id="og2-ZI-ooB"/>
                         <outlet property="startLocation" destination="sE4-BI-Anu" id="xp0-R3-o7D"/>
+                        <outlet property="unitController" destination="xOK-As-4hn" id="34X-T8-oIF"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-57.971014492753625" y="137.94642857142856"/>
         </scene>
