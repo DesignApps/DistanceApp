@@ -7,8 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "DistanceGetter/DGDistanceRequest.h"
 
 @interface ViewController ()
+
+@property (nonatomic) DGDistanceRequest *req;
+
 @property (weak, nonatomic) IBOutlet UITextField *startLocation;
 
 @property (weak, nonatomic) IBOutlet UITextField *endLocation1;
@@ -27,6 +31,8 @@
 @implementation ViewController
 
 - (IBAction)calculateButtonTapped:(id)sender {
+    
+    
     
     self.distance3.text = @"It worked";
 }
